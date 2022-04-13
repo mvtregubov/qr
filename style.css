@@ -1,0 +1,20 @@
+body {background:white; color:#1D0A3F; font-family:sans-serif;}
+h1, h2, h3 {color:#0a1d4a; }
+h1 {font-size: 1.8em; }
+h2 {font-size: 1.6em; }
+h3 {font-size: 1.4em; }
+fieldset {
+  border:4px double #396fed; 
+  padding: 0.5em; 
+  width:20%;
+  margin:20px auto; 
+  display:inline-block;
+  vertical-align:top;
+}
+legend {font-size: .92em; color:#193b8a;text-transform:uppercase; }
+label {display:block;}
+input[type="button"] {
+  margin: 4px auto; 
+  padding: 10px 20px; 
+  cursor:pointer;
+}

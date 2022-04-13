@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - QR Generator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<h1>QR</h1>
+<form action method="post">
+    <p><label>Имя</label><input type="text" name="first_name" size="20" value="Максим"></p>
+    <p><label>Отчество</label><input type="text" name="middle_name" size="20" value="Сергеевич"></p>
+    <p><label>Фамилия</label><input type="text" name="last_name" size="25" value="Мещеряков"></p>
+    <p><label>Должность</label><input type="text" name="org_title" size="25" value="Менеджер"></p>
+    <p><label>Телефон</label><input type="phone" name="org_tel" size="25" value="7-777-777-77-77"></p>
+    <p><label>E-mail</label><input type="email" name="org_email" size="25" value="info@domiki.com"></p>
+    <p><label>Сайт</label><input type="text" name="org_url" size="25" value="www.domiki.com"></p>
+    <p><input type="button" name="submit" value="Создать QR"></p>
+</form>
+
+<textarea name="vcard" style="display:none;"></textarea>
+<h3>QR code</h3>
+<img id="qr" src="http://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=" width="1600" style="image-rendering: pixelated;">
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script><script src="./script.js"></script>
+
+</body>
+</html>
