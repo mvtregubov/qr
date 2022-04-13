@@ -2,30 +2,35 @@
 <html lang="ru" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - QR Generator</title>
+  <title>QR vCard Generator</title>
+  <!-- CSS only --><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-<h1>QR</h1>
-<form action method="post">
-    <p><label>Имя</label><input type="text" name="first_name" size="20" value="Максим"></p>
-    <p><label>Отчество</label><input type="text" name="middle_name" size="20" value="Сергеевич"></p>
-    <p><label>Фамилия</label><input type="text" name="last_name" size="25" value="Мещеряков"></p>
-    <p><label>Должность</label><input type="text" name="org_title" size="25" value="Менеджер"></p>
-    <p><label>Телефон</label><input type="phone" name="org_tel" size="25" value="7-777-777-77-77"></p>
-    <p><label>E-mail</label><input type="email" name="org_email" size="25" value="info@domiki.com"></p>
-    <p><label>Сайт</label><input type="text" name="org_url" size="25" value="www.domiki.com"></p>
-    <p><input type="button" name="submit" value="Создать QR"></p>
-</form>
 
+<div class="container-fluid">
+<h1 class="display-6 mt-4">QR vCard Generator</h1>
+<div class="row">
+  <div class="col-3">
+    <form action method="post">
+        <label for="text" class="col-form-label text-black-50">Имя</label><input type="text" class="form-control mb-3" name="first_name" size="20" value="Максим">
+        <label for="text" class="col-form-label text-black-50">Отчество</label><input type="text" class="form-control mb-3" name="middle_name" size="20" value="Сергеевич">
+        <label for="text" class="col-form-label text-black-50">Фамилия</label><input type="text" class="form-control mb-3" name="last_name" size="25" value="Мещеряков">
+        <label for="text" class="col-form-label text-black-50">Должность</label><input type="text" class="form-control mb-3" name="org_title" size="25" value="Менеджер">
+        <label for="text" class="col-form-label text-black-50">Телефон</label><input type="phone" class="form-control mb-3" name="org_tel" size="25" value="7-777-777-77-77">
+        <label for="text" class="col-form-label text-black-50">E-mail</label><input type="email" class="form-control mb-3" name="org_email" size="25" value="info@domiki.com">
+        <label for="text" class="col-form-label text-black-50">Сайт</label><input type="text" class="form-control mb-3" name="org_url" size="25" value="www.domiki.com">
+        <input type="button" class="btn btn-primary w-100" name="submit" value="Создать QR">
+    </form>
+  </div>
 <textarea name="vcard" style="display:none;"></textarea>
-<h3>QR code</h3>
-<img id="qr" src="http://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=" width="1600" style="image-rendering: pixelated;">
+  <div class="col-4">
+    <img id="qr" src="http://chart.googleapis.com/chart?cht=qr&chs=400x400&chl=" width="1600" class="img-fluid" style="image-rendering: pixelated;">
+  </div>
+</div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- partial -->
-  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script><script src="./script.js"></script>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script><script src="./script.js"></script>
 
 </body>
 </html>
